@@ -133,6 +133,8 @@ nav {
     margin-bottom: 1rem;
 }
 
+
+
 /* Menu Items Grid */
 .items-grid {
     display: grid;
@@ -141,13 +143,12 @@ nav {
     padding: 1rem 0;
 }
 
-.menu-item {
-    background: white;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+.menuItem img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
+
 
 .menu-item:hover {
     transform: translateY(-4px);
@@ -197,6 +198,57 @@ nav {
 .star {
     color: #fbbf24;
 }
+
+/* Menu container with smooth vertical flow */
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Space between each category */
+    padding: 2rem;
+}
+
+/* Category Header Styling */
+.menu-category {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Horizontal scrollable container for each category */
+.menu-category-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+}
+
+.menu-category-container .menu-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 220px; /* Fixed width for each item */
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Adding subtle shadow effect to scrollbar */
+.menu-category-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.menu-category-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+/* Optional: Styling for the overall menu section */
+#menu {
+    padding: 2rem;
+}
+
+
 
 /* About Section */
 .about-content {
