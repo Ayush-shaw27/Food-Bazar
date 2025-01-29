@@ -2,34 +2,34 @@
 const menuItems = [
     // Starters
     { id: 1, category: "Starters", name: "Paneer Tikka", description: "Grilled cottage cheese marinated in spiced yogurt", price: 249, image: "/images/panner tikka.png", rating: 4.6, reviews: 180, isPopular: true },
-    { id: 2, category: "Starters", name: "Samosa", description: "Crispy pastry filled with spiced potatoes and peas", price: 99, image: "/project/images/samosa.png", rating: 4.7, reviews: 220, isPopular: true },
-    { id: 3, category: "Starters", name: "Pav Bhaji", description: "Spicy mashed vegetables served with buttered bread", price: 199, image: "/project/images/pav bhaji.png", rating: 4.8, reviews: 250 },
-    { id: 4, category: "Starters", name: "Pani Puri", description: "Crispy puris filled with spicy tangy water", price: 149, image: "/project/images/pani puri.png", rating: 4.9, reviews: 280 },
+    { id: 2, category: "Starters", name: "Samosa", description: "Crispy pastry filled with spiced potatoes and peas", price: 99, image: "/images/samosa.png", rating: 4.7, reviews: 220, isPopular: true },
+    { id: 3, category: "Starters", name: "Pav Bhaji", description: "Spicy mashed vegetables served with buttered bread", price: 199, image: "/images/pav bhaji.png", rating: 4.8, reviews: 250 },
+    { id: 4, category: "Starters", name: "Pani Puri", description: "Crispy puris filled with spicy tangy water", price: 149, image: "/images/pani puri.png", rating: 4.9, reviews: 280 },
 
     // Main Course
-    { id: 5, category: "Main Course", name: "Butter Chicken", description: "Tender chicken in rich tomato-based curry with butter and cream", price: 299, image: "/project/images/butter chicken.png", rating: 4.8, reviews: 245, isPopular: true },
-    { id: 6, category: "Main Course", name: "Chole Bhature", description: "Spicy chickpea curry served with deep-fried bread", price: 199, image: "/project/images/Chole bhature.png", rating: 4.7, reviews: 180 },
+    { id: 5, category: "Main Course", name: "Butter Chicken", description: "Tender chicken in rich tomato-based curry with butter and cream", price: 299, image: "/images/butter chicken.png", rating: 4.8, reviews: 245, isPopular: true },
+    { id: 6, category: "Main Course", name: "Chole Bhature", description: "Spicy chickpea curry served with deep-fried bread", price: 199, image: "/images/Chole bhature.png", rating: 4.7, reviews: 180 },
 
     // Tandoori
-    { id: 7, category: "Tandoori", name: "Tandoori Chicken", description: "Char-grilled chicken marinated with yogurt and spices", price: 349, image: "/project/images/Tandoori chicken.png", rating: 4.9, reviews: 320, isPopular: true },
-    { id: 8, category: "Tandoori", name: "Garlic Naan", description: "Leavened flour bread infused with garlic butter", price: 99, image: "/project/images/naan.png", rating: 4.6, reviews: 150 },
+    { id: 7, category: "Tandoori", name: "Tandoori Chicken", description: "Char-grilled chicken marinated with yogurt and spices", price: 349, image: "/images/Tandoori chicken.png", rating: 4.9, reviews: 320, isPopular: true },
+    { id: 8, category: "Tandoori", name: "Garlic Naan", description: "Leavened flour bread infused with garlic butter", price: 99, image: "/images/naan.png", rating: 4.6, reviews: 150 },
 
     // Biryani
-    { id: 9, category: "Biryani", name: "Chicken Biryani", description: "Fragrant basmati rice with aromatic spices and tender chicken", price: 349, image: "/project/images/chicken briyani.png", rating: 4.9, reviews: 320 },
-    { id: 10, category: "Biryani", name: "Veg Biryani", description: "Spiced rice cooked with fresh vegetables and herbs", price: 299, image: "/project/images/briyani.png", rating: 4.8, reviews: 200 },
+    { id: 9, category: "Biryani", name: "Chicken Biryani", description: "Fragrant basmati rice with aromatic spices and tender chicken", price: 349, image: "/images/chicken briyani.png", rating: 4.9, reviews: 320 },
+    { id: 10, category: "Biryani", name: "Veg Biryani", description: "Spiced rice cooked with fresh vegetables and herbs", price: 299, image: "/images/briyani.png", rating: 4.8, reviews: 200 },
 
     // Beverages
-    { id: 11, category: "Beverages", name: "Cold Coco", description: "Chilled coconut drink for refreshment", price: 99, image: "/project/images/cold coco.png", rating: 4.5, reviews: 150, isPopular: true },
-    { id: 12, category: "Beverages", name: "Masala Chai", description: "Indian spiced tea with cinnamon and cardamom", price: 99, image: "/project/images/masala chai.png", rating: 4.8, reviews: 150 },
-    { id: 13, category: "Beverages", name: "Mango Lassi", description: "Sweet mango yogurt drink with saffron and cardamom", price: 149, image: "/project/images/mango lassi.png", rating: 4.9, reviews: 210 },
+    { id: 11, category: "Beverages", name: "Cold Coco", description: "Chilled coconut drink for refreshment", price: 99, image: "/images/cold coco.png", rating: 4.5, reviews: 150, isPopular: true },
+    { id: 12, category: "Beverages", name: "Masala Chai", description: "Indian spiced tea with cinnamon and cardamom", price: 99, image: "/images/masala chai.png", rating: 4.8, reviews: 150 },
+    { id: 13, category: "Beverages", name: "Mango Lassi", description: "Sweet mango yogurt drink with saffron and cardamom", price: 149, image: "/images/mango lassi.png", rating: 4.9, reviews: 210 },
 
     // Juices
-    { id: 14, category: "Juices", name: "Fresh Orange Juice", description: "Freshly squeezed orange juice with no added sugar", price: 129, image: "/project/images/orange juice.png", rating: 4.7, reviews: 140 },
-    { id: 15, category: "Juices", name: "Sugarcane Juice", description: "Refreshing and naturally sweet sugarcane juice", price: 119, image: "/project/images/sugarcane juice.png", rating: 4.8, reviews: 170 },
+    { id: 14, category: "Juices", name: "Fresh Orange Juice", description: "Freshly squeezed orange juice with no added sugar", price: 129, image: "/images/orange juice.png", rating: 4.7, reviews: 140 },
+    { id: 15, category: "Juices", name: "Sugarcane Juice", description: "Refreshing and naturally sweet sugarcane juice", price: 119, image: "/images/sugarcane juice.png", rating: 4.8, reviews: 170 },
 
     // Desserts
-    { id: 16, category: "Desserts", name: "Gulab Jamun", description: "Deep-fried milk solids soaked in sugar syrup", price: 99, image: "/project/images/gulab jamun.png", rating: 4.5, reviews: 198 },
-    { id: 17, category: "Desserts", name: "Rasmalai", description: "Soft cheese dumplings soaked in saffron-flavored milk", price: 129, image: "/project/images/rasmalai.png", rating: 4.8, reviews: 220 }
+    { id: 16, category: "Desserts", name: "Gulab Jamun", description: "Deep-fried milk solids soaked in sugar syrup", price: 99, image: "/images/gulab jamun.png", rating: 4.5, reviews: 198 },
+    { id: 17, category: "Desserts", name: "Rasmalai", description: "Soft cheese dumplings soaked in saffron-flavored milk", price: 129, image: "/images/rasmalai.png", rating: 4.8, reviews: 220 }
 ];
 
 // DOM Elements
