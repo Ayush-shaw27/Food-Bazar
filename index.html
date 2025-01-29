@@ -1,165 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-204Z1QW6N1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-204Z1QW6N1');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Bazar</title>
-    <style>
-        /* Global styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(45deg, #ff5722, #ff9800);
-            color: white;
-            padding: 1rem 2rem;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ffe0b2;
-        }
-
-        section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        #menu h2 {
-            font-size: 2rem;
-            color: #ff5722;
-            margin-bottom: 1rem;
-        }
-
-        .menu-item {
-            background: white;
-            border-radius: 10px;
-            padding: 1rem;
-            margin: 1rem 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .menu-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .menu-item h3 {
-            margin: 0;
-            color: #ff9800;
-        }
-
-        .menu-item p {
-            margin: 0.5rem 0 0;
-            font-size: 1rem;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>Food Bazar - Indian Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Food Bazar</h1>
+    <!-- Login Section -->
+    <div id="loginSection" class="login-section">
+        <div class="login-container">
+            <h2>Sign in to Food Bazar</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" id="email" required placeholder="Email address">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" required placeholder="Password">
+                </div>
+                <button type="submit">Sign in</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden initially) -->
+    <div id="mainContent" class="hidden">
+        <!-- Navigation -->
         <nav>
-            <ul>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-container">
+                <div class="logo">
+                    <svg xmlns="D:\shaha\Documents\WAWI\images\Profile.png" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 4v16M4.5 6.5l15 11M19.5 6.5l-15 11"/>
+                    </svg>
+                    <span>FOOD BAZAR</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
         </nav>
-    </header>
 
-    <section id="menu">
-        <h2>Our Menu</h2>
-        <div class="menu-item">
-            <h3>Samosa</h3>
-            <p>Price: ₹30</p>
-        </div>
-        <div class="menu-item">
-            <h3>Vada Pav</h3>
-            <p>Price: ₹25</p>
-        </div>
-        <div class="menu-item">
-            <h3>Pav Bhaji</h3>
-            <p>Price: ₹50</p>
-        </div>
-        <div class="menu-item">
-            <h3>Chole Bhature</h3>
-            <p>Price: ₹80</p>
-        </div>
-        <div class="menu-item">
-            <h3>Paneer Tikka</h3>
-            <p>Price: ₹120</p>
-        </div>
-    </section>
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="welcome-banner">
+                <h1>Welcome to Food Bazar</h1>
+                <p>Experience the authentic taste of Indian cuisine</p>
+            </div>
+            
+            <!-- Popular Items -->
+            <div class="popular-items">
+                <h2>Most Popular Items</h2>
+                <div class="items-grid" id="popularItems"></div>
+            </div>
+        </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to Food Bazar! We are dedicated to serving delicious and freshly prepared dishes to satisfy your cravings. Our goal is to provide quality food and an excellent dining experience for all our customers. Thank you for choosing Food Bazar!</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions or feedback? We’d love to hear from you!</p>
-        <p>Email: foodbazar@gmail.com</p>
-        <p>Phone: +91 9876543210</p>
-        <p>Address: Pancharatna Appt, Airoli</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2023 Food Bazar. All rights reserved.</p>
-    </footer>
+        <!-- Menu Section -->
+        <section id="menu" class="section hidden">
+            <h2>Our Menu</h2>
+            <div class="items-grid" id="menuItems"></div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section hidden">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800" alt="Restaurant" class="about-image">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Founded in 1970, Food Bazar has been serving authentic Indian cuisine with love and passion. Our recipes have been passed down through generations, preserving the traditional flavors while incorporating modern culinary techniques.</p>
+                    <h3>Our Mission</h3>
+                    <p>We strive to provide our customers with the finest Indian dining experience through exceptional food quality, impeccable service, and a warm, welcoming atmosphere.</p>
+                    <h3>Quality Commitment</h3>
+                    <p>We use only the freshest ingredients and authentic spices to create our dishes. Our chefs are trained in traditional Indian cooking methods to ensure authentic taste in every bite.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section hidden">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Address:</strong> 123 Food Street, Cuisine City, IN 12345</p>
+                    <p><strong>Phone:</strong> +91 123-456-7890</p>
+                    <p><strong>Email:</strong> info@foodbazar.com</p>
+                    <p><strong>Hours:</strong><br>
+                        Monday - Sunday: 11:00 AM - 11:00 PM</p>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
