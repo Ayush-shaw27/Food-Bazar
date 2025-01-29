@@ -1,57 +1,294 @@
-#CSS file save as stle.css
-body {
-    font-family: Arial, sans-serif;
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-header {
-    background-color: #4B0082; /* Indigo */
-    color: white;
-    padding: 20px;
+body {
+    background-color: #f7f7f7;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Login Section */
+.login-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9fafb;
+    padding: 1rem;
+}
+
+.login-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h2 {
     text-align: center;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    font-size: 1.875rem;
+    font-weight: 800;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.form-group {
+    margin-bottom: 1rem;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
 }
 
-nav ul li a {
+.login-container button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #ea580c;
     color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-container button:hover {
+    background-color: #c2410c;
+}
+
+/* Navigation */
+nav {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ea580c;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #4b5563;
     text-decoration: none;
+    transition: color 0.2s;
 }
 
-section {
-    padding: 20px;
+.nav-links a:hover, .nav-links a.active {
+    color: #ea580c;
+}
+
+/* Sections */
+.section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.welcome-banner {
     text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1200') center/cover;
+    color: white;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.welcome-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Menu Items Grid */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
 }
 
 .menu-item {
-    background-color: #FFD700; /* Gold */
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 8px;
-    width: 300px;
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.menu-item h3 {
-    margin: 0;
+.menu-item:hover {
+    transform: translateY(-4px);
 }
 
-footer {
-    background-color: #4B0082; /* Indigo */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
+.menu-item img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item-content {
+    padding: 1rem;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-name {
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.menu-item-price {
+    color: #ea580c;
+    font-weight: 700;
+}
+
+.menu-item-description {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.star {
+    color: #fbbf24;
+}
+
+/* About Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.about-image {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.about-text h3 {
+    color: #1f2937;
+    margin: 1.5rem 0 0.75rem;
+}
+
+.about-text p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.contact-info h3 {
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    color: #4b5563;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 0.75rem;
+    background-color: #ea580c;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #c2410c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .about-content,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .welcome-banner h1 {
+        font-size: 2rem;
+    }
 }
