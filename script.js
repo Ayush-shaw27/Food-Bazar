@@ -1,7 +1,7 @@
 // Menu Items Data
 const menuItems = [
     // Starters
-    { id: 1, category: "Starters", name: "Paneer Tikka", description: "Grilled cottage cheese marinated in spiced yogurt", price: 249, image: "/project/images/panner tikka.png", rating: 4.6, reviews: 180, isPopular: true },
+    { id: 1, category: "Starters", name: "Paneer Tikka", description: "Grilled cottage cheese marinated in spiced yogurt", price: 249, image: "/images/panner tikka.png", rating: 4.6, reviews: 180, isPopular: true },
     { id: 2, category: "Starters", name: "Samosa", description: "Crispy pastry filled with spiced potatoes and peas", price: 99, image: "/project/images/samosa.png", rating: 4.7, reviews: 220, isPopular: true },
     { id: 3, category: "Starters", name: "Pav Bhaji", description: "Spicy mashed vegetables served with buttered bread", price: 199, image: "/project/images/pav bhaji.png", rating: 4.8, reviews: 250 },
     { id: 4, category: "Starters", name: "Pani Puri", description: "Crispy puris filled with spicy tangy water", price: 149, image: "/project/images/pani puri.png", rating: 4.9, reviews: 280 },
